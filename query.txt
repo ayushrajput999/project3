@@ -1,0 +1,34 @@
+Press Ctrl+Enter to execute query
+CREATE database hr;
+show databases;
+use hr;
+drop database hr;
+CREATE database hr;
+use hr;
+CREATE TABLE emp(fname varchar(20), lname varchar(20), age int, sal int);
+desc emp;
+insert into emp(fname, lname, age, sal ) VALUES('alok', 'singh', 34, 45555);
+SELECT * from emp;
+insert into emp(fname, lname, age, sal ) VALUES('alok2', 'singh2', 35, 46555);
+SELECT * from emp;
+
+
+CREATE database we;
+use we;
+CREATE TABLE qwe(Name varchar(20),Age int);
+SELECT * FROM `wmp`
+SELECT * FROM `wmp` WHERE Name='Ayush';
+SELECT * FROM `wmp`;
+SELECT * FROM `wmp` WHERE city='Ballia';
+SELECT * FROM `wmp` WHERE city='Ballia' or city='Lucknow';
+SELECT * FROM `wmp` WHERE city in('Ballia', 'Lucknow');
+Expand Requery Edit Explain Profiling Bookmark Database : hp Queried time : 15:28:0
+SELECT * FROM `wmp` where age>=25;
+SELECT * FROM `wmp` where age>=25 and age<=30;
+SELECT * FROM `wmp` where age BETWEEN 25 and 30;
+SELECT age, city FROM `wmp`;
+SELECT sum(salary) FROM `wmp`;
+SELECT city, sum(salary) FROM `wmp` GROUP by city;
+SELECT post, sum(salary) FROM `wmp` GROUP by post;
+SELECT post, count(post) FROM `wmp` GROUP by post;
+SELECT city, count(city) FROM `wmp` GROUP by city;
